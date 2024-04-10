@@ -1,23 +1,21 @@
-const wrapper = document.querySelector(".wrapper");
-const question = document.querySelector(".question");
-const gif = document.querySelector(".gif");
-const yesBtn = document.querySelector(".yes-btn");
-const noBtn = document.querySelector(".no-btn");
-
-yesBtn.addEventListener("click", () => {
-  question.innerHTML = "I love you too! 😘";
-  gif.src =
-    "https://www.bing.com/th/id/OGC.bf86e362b098872009951aa039cf86eb?pid=1.7&rurl=https%3a%2f%2fwww.gifcen.com%2fwp-content%2fuploads%2f2021%2f05%2fminions-gif.gif&ehk=kGWjAwwFfEFd2s1YDMdE4uvEtGCPmH6r5ogSYRS15NI%3d";
-});
-
-noBtn.addEventListener("mouseover", () => {
-  const noBtnRect = noBtn.getBoundingClientRect();
-  const maxX = window.innerWidth - noBtnRect.width;
-  const maxY = window.innerHeight - noBtnRect.height;
-
-  const randomX = Math.floor(Math.random() * maxX);
-  const randomY = Math.floor(Math.random() * maxY);
-
-  noBtn.style.left = randomX + "px";
-  noBtn.style.top = randomY + "px";
-});
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>;)</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h2 class="question">Do you love me?</h2>
+        <img class="gif" alt="gif" src="https://www.bing.com/th/id/OGC.cefdf7f18976b40e53e5b3f63bbbbc8c?pid=1.7&rurl=https%3a%2f%2fmedia.tenor.co%2fimages%2fcefdf7f18976b40e53e5b3f63bbbbc8c%2fraw&ehk=TcOs6Sz4XTplh4%2bD5QIxPUWuk0zZGUTtsSBHnjk4hgg%3d"/>
+        <div class="btn-group">
+            <button class="yes-btn">Yes</button>
+            <button class="no-btn">No</button>      
+                    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
